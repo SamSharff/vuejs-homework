@@ -10,8 +10,18 @@
   <h1>Hello from HTML!</h1>
   <div id="app">
     <h1>{{ message }}</h1>
-    <h2> {{ movies }}</h2>
 
+    <div>
+      <input type="text" v-model="movie" />
+        <div>
+        <button v-on:click="addMovie()">Add movie, if you think it's worthy</button>
+      </div>
+    </div>
+    
+    <div v-for="movie in movies">
+      <p>{{ movie }}</p>
+    </div>
+    
   </div>
 </body>
 </html>
